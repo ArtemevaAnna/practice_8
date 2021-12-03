@@ -1,0 +1,12 @@
+import argparse
+parser=argparse.ArgumentParser()
+parser.add_argument('f',type=str)
+args=parser.parse_args()
+def number_stroki(name):
+    try:
+        with open(name, 'r') as file:
+        text=file.readline(10)
+    except IOError:
+        print('я не знаю ')
+    return text
+number_stroki(args.f)
